@@ -18,3 +18,11 @@ RUN echo 'alias l="ls -CF"' >> /etc/bash.bashrc
 
 # Install cmake (clion)
 RUN /bin/bash -c apt install cmake -y
+
+# Update pvs
+RUN /bin/bash -c "wget -q -O - https://files.pvs-studio.com/etc/pubkey.txt | apt-key add -\
+    && wget -O /etc/apt/sources.list.d/viva64.list https://files.pvs-studio.com/etc/viva64.list\
+    && apt-get install apt-transport-https\
+	&& apt-get update\
+	&& apt-get install pvs-studio"
+
