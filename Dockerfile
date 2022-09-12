@@ -16,3 +16,5 @@ RUN echo 'alias ll="ls -alF"' >> /etc/bash.bashrc
 RUN echo 'alias la="ls -A"' >> /etc/bash.bashrc
 RUN echo 'alias l="ls -CF"' >> /etc/bash.bashrc
 
+# Install cmake (clion)
+RUN /bin/bash -c apt install cmake -y
