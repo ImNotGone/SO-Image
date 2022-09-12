@@ -17,7 +17,7 @@ RUN echo 'alias la="ls -A"' >> /etc/bash.bashrc
 RUN echo 'alias l="ls -CF"' >> /etc/bash.bashrc
 
 # Install cmake (clion)
-RUN /bin/bash -c apt install cmake -y
+RUN /bin/bash -c "apt install cmake -y"
 
 # Update pvs
 RUN /bin/bash -c "wget -q -O - https://files.pvs-studio.com/etc/pubkey.txt | apt-key add -\
@@ -27,4 +27,4 @@ RUN /bin/bash -c "wget -q -O - https://files.pvs-studio.com/etc/pubkey.txt | apt
 	&& apt-get install pvs-studio"
 
 # Install lsof
-RUN /bin/bash -c apt-get install lsof -y
+RUN /bin/bash -c "apt install lsof -y"
