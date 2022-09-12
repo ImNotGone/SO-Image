@@ -26,3 +26,5 @@ RUN /bin/bash -c "wget -q -O - https://files.pvs-studio.com/etc/pubkey.txt | apt
 	&& apt-get update\
 	&& apt-get install pvs-studio"
 
+# Install lsof
+RUN /bin/bash -c apt-get install lsof -y
