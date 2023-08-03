@@ -1,7 +1,7 @@
 FROM agodio/itba-so:1.0
 
 # cd /root upon entry, to be at the binded folder
-ENTRYPOINT cd /root/ && /bin/bash
+WORKDIR /root
 
 # Add colors to gcc & ls output
 ENV GCC_COLORS="error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01"
